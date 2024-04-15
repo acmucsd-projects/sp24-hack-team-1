@@ -1,10 +1,11 @@
 import Link from "next/link"
+import styles from "./page.module.css"
 
-function page() {
+function Planning() {
     return(
         <Link href="/">
-                <button>Go to Planning Page</button>
+                <button className={styles.btn}>Go to Planning Page</button>
         </Link>
     )
 }
-export default page;
+export default Planning;
