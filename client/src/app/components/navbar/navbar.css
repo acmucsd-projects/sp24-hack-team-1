@@ -1,0 +1,11 @@
+#navbar{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title{
+    text-align: left;
+    color: pink;
+    float: left;
+}
