@@ -28,6 +28,10 @@
     text-decoration: none;
     color: black;
     font-family: "Yeseva One", serif;
+    position: absolute;
+    left: 135px;
+    top: 50px;
+    margin: 0px;
 }
 
 .navButtons {

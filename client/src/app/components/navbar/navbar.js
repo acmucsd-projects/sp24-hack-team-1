@@ -29,7 +29,7 @@ export default function navbar(){
                 <Link href='/explore'>
                     Explore
                 </Link>
-                <Link href='/Schedule Planner'>
+                <Link href='/Planner'>
                     Planner
                 </Link>
                 <Link href='/Map'>
