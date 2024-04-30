@@ -11,7 +11,7 @@
     border-bottom-style: solid;
 }
 
-.title{
+.title{ 
     text-align: left;
     color: pink;
     float: left;
@@ -23,7 +23,7 @@
 }
 
 .titleHolder a { 
-    font-size: 30px;
+    font-size: 190%;
     padding-right: 600px;
     text-decoration: none;
     color: black;
