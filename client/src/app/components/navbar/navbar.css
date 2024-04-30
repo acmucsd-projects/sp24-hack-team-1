@@ -1,0 +1,58 @@
+#navbar{
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    padding-bottom: 15px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+}
+
+.title{ 
+    text-align: left;
+    color: pink;
+    float: left;
+}
+
+.title img {
+    width: 100px;
+    height: auto;
+}
+
+.titleHolder a { 
+    font-size: 190%;
+    padding-right: 600px;
+    text-decoration: none;
+    color: black;
+    font-family: "Yeseva One", serif;
+    position: absolute;
+    left: 135px;
+    top: 50px;
+    margin: 0px;
+}
+
+.navButtons {
+    display: flex;
+    margin-right: 16px;
+}
+.navButtons a {
+    margin-left: 50px;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-family: "Yeseva One", serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: all 0.1s ease-out;
+}
+
+.navButtons a:hover {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.1s;
+}

@@ -227,3 +227,37 @@
     transform: rotate(0deg);
   }
 }
+
+.homeContainer {
+  width: 100%;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 80px;
+  font-family: "Josefin Sans", serif;
+  display: flex;
+  justify-content: center;
+}
+
+.desc {
+  font-family: "Yeseva One", serif;
+  font-size: 25px;
+}
+
+.homebody {
+  display: flex;
+}
+
+.img1 {
+  height: auto;
+}
+
+.img2 {
+  height: auto;
+}
+
+.homeimg1 {
+  width: 65vw;
+  margin: 0px;
+}
