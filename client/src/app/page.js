@@ -5,6 +5,7 @@ import Searchbar from './components/Searchbar'
 export default function Home() {
   return (
     <main className={styles.main}>
+      <Searchbar></Searchbar>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
