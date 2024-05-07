@@ -242,22 +242,44 @@
 
 .desc {
   font-family: "Yeseva One", serif;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .homebody {
   display: flex;
+  justify-content: left;
 }
 
 .img1 {
+  padding-left: 80px;
+  padding-right: 0px;
+  padding-top: 0px;
   height: auto;
+  flex: 1;
+  max-width: 87%;
+}
+
+.homerightside {
+  flex: 1;
+  width: 50vw;
+  padding-right: 30px;
 }
 
 .img2 {
   height: auto;
+  max-width: 100%;
 }
 
 .homeimg1 {
-  width: 65vw;
+  width: 50vw;
   margin: 0px;
+  padding-right: 0;
+}
+
+.homeBtn {
+  margin-top: 25px;
+  color: #db9225;
+  background-color: white;
+  cursor: pointer;
+  border-color: #db9225;
 }
