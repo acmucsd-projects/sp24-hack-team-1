@@ -31,11 +31,11 @@ export default function Home() {
             <Image className={styles.img2}
             src="/img2.jpg"
             alt="homepic2"
-            width={250}
-            height={250}
+            width={621}
+            height={283}
             priority
             />
-            <button>
+            <button className={styles.homeBtn}>
               Plan your itinerary
             </button>
           </div>
