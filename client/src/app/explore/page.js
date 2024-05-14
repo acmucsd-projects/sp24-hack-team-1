@@ -1,13 +1,15 @@
 import Link from "next/link"
 import styles from "./page.module.css"
-import NavBar from '../components/navbar/navbar'
+import Searchbar from "../components/Searchbar/Searchbar"
+import Navbar from "../components/navbar/navbar"
 
 function MainPage() {
     return(
-        <div>
+        <div className={styles.homeContainer}>
             <div>
-            <NavBar></NavBar>
+                <Navbar></Navbar>
             </div>
+            <Searchbar></Searchbar>
         </div>
     )
 }
