@@ -1,11 +1,14 @@
 import Link from "next/link"
 import styles from "./page.module.css"
+import NavBar from '../components/navbar/navbar'
 
 function MainPage() {
     return(
-        <Link href="/">
-                <button className={styles.btn}>Go to MainPage Page</button>
-        </Link>
+        <div>
+            <div>
+            <NavBar></NavBar>
+            </div>
+        </div>
     )
 }
 export default MainPage;
