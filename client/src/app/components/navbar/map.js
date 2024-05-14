@@ -3,19 +3,22 @@ import React, { useEffect, useRef } from "react";
 import { Loader } from '@googlemaps/js-api-loader';
 
 export default function Map() {
+    console.log("bruh")
+    console.log("Process:" + process.env);
+    console.log(process.env.NEXT_PUBLIC_MAPS_API_KEY);
     const mapRef = useRef(null);
 
     useEffect(() => {
         const initMap = async () => {
             const loader = new Loader({
-                apiKey: process.env.NEXT_PUBLIC_MAPS_API_KEY,
+                apiKey: 'AIzaSyA5b2NXZOUrWpQZ4_1ZT8rKok3tcc1sYq0',
                 version: 'weekly'
             });
 
             const { Map } = await loader.importLibrary('maps');
             const position = {
                 lat: 32.7157,
-                lng: 117.1611
+                lng: -117.1611
             };
 
             // Map options
