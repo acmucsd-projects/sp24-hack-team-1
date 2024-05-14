@@ -22,7 +22,7 @@ export default function Map() {
             const mapOptions = {
                 center: position,
                 zoom: 11,
-                mapId: 'MY_NEXTJS_MAPID'
+                mapId: '104dc8e32646e1c4'
             };
             
             // Setup map
