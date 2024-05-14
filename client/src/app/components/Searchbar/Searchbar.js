@@ -8,7 +8,7 @@ import './Searchbar.css';
 const Searchbar = () => {
     return (
         <div className="main">
-            <h1>React Search</h1>
+            <h1>SD Hack Tours</h1>
             <div className="search">
             <TextField
             id="outlined-basic"
