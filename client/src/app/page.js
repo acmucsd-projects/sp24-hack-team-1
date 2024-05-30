@@ -2,6 +2,7 @@ import Image from 'next/image';
 import styles from './page.module.css';
 import SearchBar from './components/Searchbar/Searchbar';
 import NavBar from './components/navbar/navbar';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -36,7 +37,9 @@ export default function Home() {
             priority
             />
             <button className={styles.homeBtn}>
-              Plan your itinerary
+              <Link href='/explore'>
+                    Plan your itinerary
+                </Link>
             </button>
           </div>
       </div>
