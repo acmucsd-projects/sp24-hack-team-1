@@ -9,6 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< Updated upstream
+=======
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.15",
+    "next": "^13.5.4",
+>>>>>>> Stashed changes
     "react": "^18",
     "react-dom": "^18",
     "next": "13.5.4"
