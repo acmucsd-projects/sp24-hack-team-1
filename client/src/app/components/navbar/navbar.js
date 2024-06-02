@@ -29,10 +29,10 @@ export default function navbar(){
                 <Link href='/explore'>
                     Explore
                 </Link>
-                <Link href='/Planner'>
+                <Link href='/planning'>
                     Planner
                 </Link>
-                <Link href='/Map'>
+                <Link href='/map'>
                     Map
                 </Link>
             </div>
