@@ -13,7 +13,11 @@ const Searchbar = () => {
                 {
                     types: ['establishment'],
                     componentRestrictions: {'country': ['US']},
+<<<<<<< HEAD
                     fields: ['place_id', 'geometry', 'name', 'price-level']
+=======
+                    fields: ['place_id', 'geometry', 'name']
+>>>>>>> 85bf20c7bd64a570a5da2646def19dd415161b9b
                 }
             );
         }

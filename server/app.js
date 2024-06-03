@@ -18,7 +18,7 @@ dotenv.config();
 mongoose.connect(process.env.DB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true }).then(() => {
-  console.log('Connected to MongoDB database');
+  console.log('Connected to Hack Tours database');
 });
 
 module.exports = app;

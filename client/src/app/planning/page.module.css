@@ -1,0 +1,14 @@
+.btn{
+    color: red;
+}
+
+.cardsContainer {
+    display: flex;
+    width: 100vw;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+    background-color: #f8f9fa;
+    max-height: 50%;
+}
+
