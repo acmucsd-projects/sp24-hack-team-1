@@ -5,6 +5,7 @@
     "@googlemaps/js-api-loader": "^1.16.6",
     "@mui/material": "^5.15.17",
     "@react-google-maps/api": "^2.19.3",
+    "axios": "^1.7.2",
     "mongodb": "^6.5.0",
     "mongoose": "^8.3.1"
   },

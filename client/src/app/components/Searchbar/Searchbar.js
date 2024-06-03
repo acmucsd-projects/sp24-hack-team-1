@@ -2,24 +2,35 @@
 import React, { useState, useEffect } from "react";
 import TextField from "@mui/material/TextField";
 import List from "./list";
+import styles from "../../explore/page.module.css"
 import './Searchbar.css';
+import ExploreCard from '../exploreCard/ExploreCard';
 
 const Searchbar = () => {
+    const [results, setResults] = useState([]);
     useEffect(() => {
         let autocomplete;
         function initAutocomplete() {
-            autocomplete = new google.maps.places.Autocomplete(
+            autocomplete = new google.maps.places.SearchBox(
                 document.getElementById('autocomplete'),
                 {
                     types: ['establishment'],
                     componentRestrictions: {'country': ['US']},
-<<<<<<< HEAD
-                    fields: ['place_id', 'geometry', 'name', 'price-level']
-=======
-                    fields: ['place_id', 'geometry', 'name']
->>>>>>> 85bf20c7bd64a570a5da2646def19dd415161b9b
+                    fields: ['place_id', 'geometry', 'name', 'photos']
                 }
             );
+            autocomplete.addListener("places_changed", () => {
+                let places = autocomplete.getPlaces();
+                
+                let newResults = [];
+                for (let i = 0; i < places.length; i++) {
+                    let newName = places[i].name;
+                    let newPhoto = places[i].photos[0].getUrl();
+                    newResults[i] = [newName, newPhoto];
+                }
+
+                setResults(newResults);
+            });
         }
         // Ensure the Google Maps API is loaded before calling initAutocomplete
         if (typeof google !== 'undefined') {
@@ -43,6 +54,15 @@ const Searchbar = () => {
                 />
             </div>
             <List />
+            <div className={styles.exploreCardsContainer}>
+                {results.map((result) => (
+                    <ExploreCard 
+                        title={result[0]}
+                        imageURL={result[1]}
+                        body="test desc 2"
+                        />
+                ))}
+            </div>
         </div>
     );
 }

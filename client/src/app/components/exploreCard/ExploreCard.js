@@ -1,8 +1,18 @@
-import React from 'react'
+import React from 'react';
 import './ExploreCard.css'
 import Image from 'next/image';
+import axios from "axios";
 
 export default function ExploreCard({title, imageURL, body}) {
+    const handleClick = async () => {
+        try {
+          const response = await axios.post("http://localhost:5000/api/plan", {title: title, imageURL: imageURL});
+          console.log(response.data);
+        } catch (error) {
+          console.error("Failed to update: ", error);
+        }
+    };
+
     return (
         <div className="card-container">  
             <div className="image-container">
@@ -17,7 +27,7 @@ export default function ExploreCard({title, imageURL, body}) {
                 </div>
             </div>
             <div className='btn'>
-                <button>
+                <button onClick={()=>{handleClick()}}>
                     <a>
                         Add to Itinerary
                     </a>

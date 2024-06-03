@@ -1,9 +1,27 @@
+"use client";
+
 import Link from "next/link"
 import styles from "./page.module.css"
 import NavBar from '../components/navbar/navbar'
 import Card from '../components/locationCard/Card'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 function Planning() {
+    const [planner, setPlanner] = useState([]);
+    const fetchData = async () => {
+        try {
+            const response = await axios.get("http://localhost:5000/api/plan");
+            setPlanner(response.data);
+        }
+        catch(error) {
+            console.error("Failed to fetch planner: ", error);
+        };
+    }
+    useEffect(() => {
+        fetchData();
+    }, []); 
+
     return(
         <div>
             <div>
@@ -13,41 +31,13 @@ function Planning() {
                 Your planner is empty. Click the plus to get planning!
             </h1>
             <div className={styles.cardsContainer}>
-                <Card
-                title="Card Title"
-                imageURL="https://images.app.goo.gl/PFrR8yG3jZ2NYrsV9"
-                body="this is a test desc"
-                />
-                <Card
-                title="card title 2"
-                imageURL="/homepic2.svg"
-                body="test desc 2"
-                />
-                <Card
-                title="card title 2"
-                imageURL="/homepic2.svg"
-                body="test desc 2"
-                />
-                <Card
-                title="card title 2"
-                imageURL="/homepic2.svg"
-                body="test desc 2"
-                />
-                <Card
-                title="card title 2"
-                imageURL="/homepic2.svg"
-                body="test desc 2"
-                />
-                <Card
-                title="card title 2"
-                imageURL="/homepic2.svg"
-                body="test desc 2"
-                />
-                <Card
-                title="card title 2"
-                imageURL="/homepic2.svg"
-                body="test desc 2"
-                />
+                {planner.map((place) => (
+                    <Card
+                    title={place.title}
+                    imageURL={place.imageURL}
+                    body="this is a test desc"
+                    />
+                ))}        
             </div>
         </div>
     )
