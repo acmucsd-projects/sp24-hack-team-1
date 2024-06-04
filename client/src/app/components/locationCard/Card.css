@@ -5,6 +5,10 @@
     transition: 0.3s;
     animation: ease-in-out;
     margin: 1rem;
+    display: flex;          /* Use flexbox */
+    flex-wrap: wrap;        /* Allow items to wrap to the next line */
+    justify-content: flex-start; /* Align items from left to right */
+    gap: 1rem;              /* Optional: Add gap between items */
 }
 
 .card-container:hover {

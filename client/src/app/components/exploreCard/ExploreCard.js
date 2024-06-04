@@ -6,7 +6,7 @@ import axios from "axios";
 export default function ExploreCard({title, imageURL, body}) {
     const handleClick = async () => {
         try {
-          const response = await axios.post("http://localhost:5000/api/plan", {title: title, imageURL: imageURL});
+          const response = await axios.post("http://localhost:5000/api/plan", {title: title, imageURL: imageURL, description: body});
           console.log(response.data);
         } catch (error) {
           console.error("Failed to update: ", error);
