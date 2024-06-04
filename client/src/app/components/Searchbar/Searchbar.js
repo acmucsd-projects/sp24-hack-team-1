@@ -14,9 +14,12 @@ const Searchbar = () => {
             autocomplete = new google.maps.places.SearchBox(
                 document.getElementById('autocomplete'),
                 {
-                    bounds: new google.maps.LatLngBounds(
-                        new google.maps.LatLng(-34, 115),
-                        new google.maps.LatLng(-30, 119))
+                    // bounds: new google.maps.LatLngBounds(
+                    //     new google.maps.LatLng(-34, 115),
+                    //     new google.maps.LatLng(-30, 119))
+                    types: ['establishment'],
+                    componentRestrictions: {'country': ['US']},
+                    fields: ['place_id', 'geometry', 'name']
                 }
             );
             autocomplete.addListener("places_changed", () => {
