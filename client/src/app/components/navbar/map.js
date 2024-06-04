@@ -11,7 +11,7 @@ export default function Map() {
     useEffect(() => {
         const initMap = async () => {
             const loader = new Loader({
-                apiKey: '',
+                apiKey: 'AIzaSyA5b2NXZOUrWpQZ4_1ZT8rKok3tcc1sYq0',
                 version: 'weekly'
             });
 
