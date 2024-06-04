@@ -19,7 +19,7 @@ app.use('/api', router);
 
 dotenv.config();
 
-mongoose.connect("mongodb+srv://prtran:hacktours@cluster0.yoypzlo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
+mongoose.connect(process.env.DB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true }).then((client) => {
   mongoose.connection.db.dropDatabase();

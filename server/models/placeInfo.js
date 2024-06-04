@@ -6,7 +6,7 @@ const placeInfoSchema = new mongoose.Schema({
   imageURL: { type: String }
 });
 
-// Create a model for our GameStats based on the schema
+// Create a model for our PlaceInfo based on the schema
 const PlaceInfo = mongoose.model('PlaceInfo', placeInfoSchema);
 
 module.exports = PlaceInfo;

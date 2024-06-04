@@ -14,9 +14,9 @@ const Searchbar = () => {
             autocomplete = new google.maps.places.SearchBox(
                 document.getElementById('autocomplete'),
                 {
-                    types: ['establishment'],
-                    componentRestrictions: {'country': ['US']},
-                    fields: ['place_id', 'geometry', 'name', 'photos']
+                    bounds: new google.maps.LatLngBounds(
+                        new google.maps.LatLng(-34, 115),
+                        new google.maps.LatLng(-30, 119))
                 }
             );
             autocomplete.addListener("places_changed", () => {
@@ -25,7 +25,10 @@ const Searchbar = () => {
                 let newResults = [];
                 for (let i = 0; i < places.length; i++) {
                     let newName = places[i].name;
-                    let newPhoto = places[i].photos[0].getUrl();
+                    let newPhoto = "";
+                    if (places[i].photos != null && places[i].photos.length != 0) {
+                        newPhoto = places[i].photos[0].getUrl();
+                    }
                     newResults[i] = [newName, newPhoto];
                 }
 
