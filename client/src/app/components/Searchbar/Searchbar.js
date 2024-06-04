@@ -29,7 +29,8 @@ const Searchbar = () => {
                     if (places[i].photos != null && places[i].photos.length != 0) {
                         newPhoto = places[i].photos[0].getUrl();
                     }
-                    newResults[i] = [newName, newPhoto];
+                    let newAddress = places[i].formatted_address;
+                    newResults[i] = [newName, newPhoto, newAddress];
                 }
 
                 setResults(newResults);
@@ -62,7 +63,7 @@ const Searchbar = () => {
                     <ExploreCard 
                         title={result[0]}
                         imageURL={result[1]}
-                        body="test desc 2"
+                        body={result[2]}
                         />
                 ))}
             </div>

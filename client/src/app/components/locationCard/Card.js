@@ -5,7 +5,6 @@ import Image from 'next/image';
 export default function Card({title, imageURL, body}) {
     return (
         <div className="card-container">  
-            Card
             <div className="image-container">
                 <img src={imageURL} alt='card-image'/>
             </div>

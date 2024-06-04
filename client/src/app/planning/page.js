@@ -35,7 +35,7 @@ function Planning() {
                     <Card
                     title={place.title}
                     imageURL={place.imageURL}
-                    body="this is a test desc"
+                    body={place.description}
                     />
                 ))}        
             </div>
