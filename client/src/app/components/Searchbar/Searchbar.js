@@ -48,7 +48,7 @@ const Searchbar = () => {
     return (
         <div className="main">
              <script async
-               src='https://maps.googleapis.com/maps/api/js?key=>
+               src='https://maps.googleapis.com/maps/api/js?key=AIzaSyA5b2NXZOUrWpQZ4_1ZT8rKok3tcc1sYq0&loading=async&libraries=places&callback=initMap'>
            </script>  
 
             <h1>SD Hack Tours</h1>
